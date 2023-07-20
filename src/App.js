@@ -13,7 +13,6 @@ const App = () => {
   const [notes, setNotes] = useState([]);
   const [selectedNote, setSelectedNote] = useState(null);
   const [filteredNotes, setFilteredNotes] = useState([]);
-  const [isNoteAdded, setIsNoteAdded] = useState(false);
 
   const handleSearch = (searchTerm) => {
     const filtered = notes.filter(
@@ -29,12 +28,11 @@ const App = () => {
     // Add the new note to the state
     setNotes([newNote, ...notes]);
     setFilteredNotes([newNote, ...notes]); // Update the filtered notes to include the new note
-    setIsNoteAdded(true); // Show the "Note Created Successfully" popup
     // Clear the selected note so that the NoteDetails disappear
     setSelectedNote(null);
     // Hide the "Note Created Successfully" popup after 2 seconds
     setTimeout(() => {
-      setIsNoteAdded(false);
+      setFilteredNotes([...notes]); // Restore the filtered notes after the popup disappears
     }, 2000);
   };
 
