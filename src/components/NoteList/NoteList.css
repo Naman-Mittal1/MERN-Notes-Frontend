@@ -1,0 +1,67 @@
+/* NoteList.css */
+
+.note-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.note {
+  flex: 1 1 calc(33.33% - 20px);
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f0f7ff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.note h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #0099cc;
+}
+
+.note p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.note:hover {
+  background-color: #e5f1ff;
+  transform: scale(1.01);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.note__delete-btn {
+  background-color: #2773c4;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.note__delete-btn:hover {
+  background-color: #2272eb;
+}
+
+.note__delete-btn:focus {
+  outline: none;
+}
