@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './NoteForm.css';
 
-const API_BASE_URL = 'http://localhost:4000/api';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const NoteForm = ({ onNoteSubmit }) => {
   const [formData, setFormData] = useState({ title: '', content: '', category: '', tags: [] });

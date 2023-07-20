@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './NoteList.css';
 
-const API_BASE_URL = 'http://localhost:4000/api'; // Update with your backend URL
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const NoteList = ({ notes, setSelectedNote }) => {
   const [notesState, setNotesState] = useState(notes);

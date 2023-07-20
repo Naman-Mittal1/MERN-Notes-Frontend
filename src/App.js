@@ -7,7 +7,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import NoteDetails from './components/NoteDetails/NoteDetails';
 import './App.css';
 
-const API_BASE_URL = 'http://localhost:4000/api'; // Update with your backend URL
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const App = () => {
   const [notes, setNotes] = useState([]);
